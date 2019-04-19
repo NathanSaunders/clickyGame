@@ -44,7 +44,7 @@ class App extends Component {
         //when 12 are answered
         () => {
           if (this.state.score === 12) {
-            alert("Wow, looks like we got a regular Denis Diderot here!");
+            alert("Wow, looks like we got a regular Denis Diderot here! ");
             this.setState({
               img: this.state.img.sort(function(a, b) {
                 return 0.5 - Math.random();
