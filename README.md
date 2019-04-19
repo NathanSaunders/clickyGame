@@ -1,4 +1,4 @@
-# Clicky Abstract Art Game
+![LauraLetchingerArt](https://user-images.githubusercontent.com/43506553/56410475-131c0100-6232-11e9-8a4a-8e80a24434a4.jpg)
 
 ## Overview
 
