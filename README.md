@@ -6,7 +6,7 @@ This assignment for the University of Washington Coding Bootcamp is a memory gam
 
 ### Installing Locally
 
-To install the application follow the instructions below:
+To install the application clone the repository into your terminal and follow the instructions below:
 
     git clone https://github.com/NathanSaunders/clickyGame.git
     cd clickyGame
