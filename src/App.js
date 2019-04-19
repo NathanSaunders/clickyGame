@@ -15,13 +15,12 @@ class App extends Component {
     score: 0
   };
 
-//when you click on a card ... the img is taken out of the array
+  //when you click on a card ... the img is taken out of the array
   imageClick = event => {
     const currentImg = event.target.alt;
-    const imgAlreadyClicked =
-      this.state.clickedImg.indexOf(currentImg) > -1;
+    const imgAlreadyClicked = this.state.clickedImg.indexOf(currentImg) > -1;
 
-//if you click on img that has already been selected, the game is reset and cards reordered
+    //if you click on img that has already been selected, the game is reset and cards reordered
     if (imgAlreadyClicked) {
       this.setState({
         img: this.state.img.sort(function(a, b) {
@@ -30,24 +29,22 @@ class App extends Component {
         clickedImg: [],
         score: 0
       });
-        alert("You lose. Play again?");
+      alert("You lose. Play again?");
 
-//if you click on an available img, your score is increased and cards reordered
+      //if you click on an available img, your score is increased and cards reordered
     } else {
       this.setState(
         {
           img: this.state.img.sort(function(a, b) {
             return 0.5 - Math.random();
           }),
-          clickedImg: this.state.clickedImg.concat(
-            currentImg
-          ),
+          clickedImg: this.state.clickedImg.concat(currentImg),
           score: this.state.score + 1
         },
-//when 12 are answered      
+        //when 12 are answered
         () => {
           if (this.state.score === 12) {
-            alert("Yay! You Win!");
+            alert("Wow, looks like we got a regular Denis Diderot here!");
             this.setState({
               img: this.state.img.sort(function(a, b) {
                 return 0.5 - Math.random();
@@ -61,13 +58,11 @@ class App extends Component {
     }
   };
 
-//the order of components to be rendered: navbar, jumbotron, friendcard, footer 
+  //the order of components to be rendered: navbar, jumbotron, friendcard, footer
   render() {
     return (
       <div>
-        <Navbar 
-          score={this.state.score}
-        />
+        <Navbar score={this.state.score} />
         <Jumbotron />
         <div className="wrapper">
           {this.state.img.map(img => (
